@@ -97,9 +97,9 @@ const ContactMe = () => {
               id="Email"
               type="text"
             />
-            <input
+            <textarea
               className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[15rem] bg-[lightblue] border-solid custom-placeholder text-lg"
-              rows="4"
+              rows={4}
               autoComplete="off"
               required
               placeholder="Please type your message ..."
