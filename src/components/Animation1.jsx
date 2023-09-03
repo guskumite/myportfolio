@@ -6,7 +6,7 @@ const Animation1 = () => {
     <div>
       <img
         className="slow-spin absolute
-        w-[14rem] absolute top-[12rem] right-[4rem]"
+        w-[14rem] absolute top-[16rem] right-[2rem]"
         src={img}
       />
     </div>

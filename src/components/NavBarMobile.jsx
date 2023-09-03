@@ -1,16 +1,10 @@
-import { useState } from "react";
-
-function NavBarMobile({ open, setOpen }) {
-  setOpen(localStorage.getItem("navbarOpen") === "true" ? true : false);
+function NavBarMobile({ open, onToggle }) {
   console.log(open);
   return (
-    <div className="flex absolute top-[2rem] right-[2rem]">
-      <button
-        className="block md:hidden px-4 bg-slate-50"
-        onClick={() => setOpen(!open)}
-      >
+    <div className="flex absolute top-[2rem] right-[2rem] w-[8rem]">
+      <button className="block md:hidden px-4 bg-slate-50" onClick={onToggle}>
         <svg
-          className="w-6 h-6"
+          className="w-6 h-6 text-cyan-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -28,9 +22,37 @@ function NavBarMobile({ open, setOpen }) {
       <div
         className={`${
           open ? "block" : "hidden"
-        } md:block md:static absolute md:h-auto h-screen top-[4rem] left-0 md:w-auto w-full bg-gray-100 px-4 py-4`}
+        } md:block md:static absolute md:h-auto h-[12rem] top-[4rem] left-0 md:w-auto w-full bg-cyan-400 px-4 py-4`}
+        style={{ zIndex: 9999 }}
       >
-        <a href="https://google.com.mx"> Hola </a>
+        <a className="text-md hover:text-cyan-700 hover:text-lg" href="/">
+          {" "}
+          Home{" "}
+        </a>
+        <a
+          className="text-md hover:text-cyan-700 hover:text-lg"
+          href="/#projects"
+        >
+          {" "}
+          Projects
+        </a>
+        <a className="text-md hover:text-cyan-700 hover:text-lg" href="/about">
+          {" "}
+          About Me
+        </a>
+        <a className="text-md hover:text-cyan-700 hover:text-lg" href="/">
+          {" "}
+          Contact Me
+        </a>
+        <a
+          className="text-md hover:text-cyan-700 hover:text-lg"
+          href="https://www.academlo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Academlo
+        </a>
       </div>
     </div>
   );
