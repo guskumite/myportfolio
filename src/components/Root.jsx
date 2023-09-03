@@ -5,6 +5,7 @@ import pokeIco from "../assets/pokedex_icon.png";
 import clothIco from "../assets/clothing.png";
 import crudIco from "../assets/crud.png";
 import amznIco from "../assets/amazon_bookstore.png";
+import wthrIco from "../assets/weather_icon.png";
 import "../App.css";
 import Animation1 from "./Animation1";
 import NavBar from "./NavBar";
@@ -58,7 +59,7 @@ const Root = () => {
         {" "}
         <h2 className="relative text-2xl font-bold text-cyan-400">Hi!</h2>
         <h2 className="px-4 relative text-2xl text-zinc-300">I am a Dev</h2>
-        <h1 className="relative text-2xl text-zinc-400">
+        <h1 className="relative text-xl text-zinc-400">
           I am Gustavo Molano {txt1}
         </h1>
       </section>
@@ -113,6 +114,19 @@ const Root = () => {
             <img className="ml-[20%] w-[4rem] h-[4rem]" src={amznIco} />
             <p className="text-sm relative font-bold">
               A real Amazon bookstore funnel
+            </p>
+          </div>
+        </a>
+        <a
+          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+          href="https://myfavoritebooksapp.netlify.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img className="ml-[20%] w-[4rem] h-[4rem]" src={wthrIco} />
+            <p className="text-sm relative font-bold">
+              A simple weather channel
             </p>
           </div>
         </a>
