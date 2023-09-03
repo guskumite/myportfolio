@@ -5,6 +5,7 @@ import "../App.css";
 import Animation1 from "./Animation1";
 import NavBar from "./NavBar";
 import NavBarMobile from "./NavBarMobile";
+import { Link } from "react-router-dom";
 
 const ContactMe = () => {
   const [bgImg, setBgImg] = useState();
@@ -60,7 +61,7 @@ const ContactMe = () => {
     const URLWSP = "https://api.whatsapp.com/send?phone=573102612868&text=";
     const envio =
       URLWSP + "Name: " + name + " Email: " + email + " Message: " + message;
-    location.href = envio;
+    window.open(envio, "_blank");
     return 0;
   };
 
@@ -98,6 +99,7 @@ const ContactMe = () => {
             />
             <input
               className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[15rem] bg-[lightblue] border-solid custom-placeholder text-lg"
+              rows="4"
               autoComplete="off"
               required
               placeholder="Please type your message ..."

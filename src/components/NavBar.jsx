@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const NavBar = () => {
   return (
-    <section className="flex flex-row flex-wrap w-full absolute top-[2rem] left-[5rem]">
+    <section className="flex flex-row flex-wrap w-full absolute top-[2rem] left-[9.5rem]">
       <Link
         to="/"
         className="relative text-sm w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
