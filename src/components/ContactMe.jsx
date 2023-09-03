@@ -109,9 +109,31 @@ const ContactMe = () => {
             <button className="ml-[15%] mt-4 mb-4 bg-cyan-600 w-32 text-black text-lg border-solid border-gray-400 md:ml-[10%] lg:ml-[20%] md:w-3/4 lg:w-1/2">
               Send message
             </button>
+            <p className="absolute top-[0.1rem] left-[1rem]"> Follow me on: </p>
+            <a
+              className="w-[1rem] absolute top-[0.1rem] left-[7.8rem]"
+              href="https://www.facebook.com/guskumite/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <box-icon
+                type="logo"
+                className="w-[1rem] h-[1rem]"
+                name="facebook-circle"
+              ></box-icon>
+            </a>
+            <a
+              className="w-[1rem] absolute top-[0.1rem] left-[9.3rem]"
+              href="https://www.instagram.com/guskumite/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <box-icon type="logo" name="instagram"></box-icon>
+            </a>
           </div>
         </form>
-        <div className="relative left-[-32rem] top-[2rem]">
+        <div className="relative left-[-45rem] top-[2rem]">
           <Animation1 />
         </div>
       </section>
