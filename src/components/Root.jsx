@@ -65,52 +65,52 @@ const Root = () => {
       <Animation1 />
       <section
         id="projects"
-        className="absolute top-[15rem] left-[2rem] bg-emerald-100
-      w-[60%] h-[auto] flex flex-row flex-wrap align-items"
+        className="absolute top-[11.9rem] left-[2rem] bg-emerald-100
+      w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px]"
       >
         <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[7rem] h-[7rem] bg-emerald-100 hover:bg-amber-200 rounded-[30px]"
+          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
           href="https://bodegacool.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div>
-            <img className="w-[4rem] h-[4rem]" src={clothIco} />
-            <p className="text-sm opacity-65 relative w-[9rem] font-bold">
+            <img className="ml-[20%] w-[4rem] h-[4rem]" src={clothIco} />
+            <p className="text-sm relative w-[9rem] font-bold">
               A clothing store
             </p>
           </div>
         </a>
         <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[7rem] h-[7rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
           href="https://guskumitenopokedex.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div>
-            <img className="w-[4rem] h-[4rem]" src={pokeIco} />
+            <img className="ml-[20%] w-[4rem] h-[4rem]" src={pokeIco} />
             <p className="text-sm relative font-bold">The Pokedex </p>
           </div>
         </a>
         <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[7rem] h-[7rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
           href="https://theuserscrud.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div>
-            <img className="w-[4rem] h-[4rem]" src={crudIco} />
+            <img className="ml-[20%] w-[4rem] h-[4rem]" src={crudIco} />
             <p className="text-sm relative font-bold">User's CRUD with API</p>
           </div>
         </a>
         <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[7rem] h-[7rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
           href="https://myfavoritebooksapp.netlify.app"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div>
-            <img className="w-[4rem] h-[4rem]" src={amznIco} />
+            <img className="ml-[20%] w-[4rem] h-[4rem]" src={amznIco} />
             <p className="text-sm relative font-bold">
               A real Amazon bookstore funnel
             </p>

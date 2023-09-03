@@ -40,7 +40,10 @@ function NavBarMobile({ open, onToggle }) {
           {" "}
           About Me
         </a>
-        <a className="text-md hover:text-cyan-700 hover:text-lg" href="/">
+        <a
+          className="text-md hover:text-cyan-700 hover:text-lg"
+          href="/contact"
+        >
           {" "}
           Contact Me
         </a>

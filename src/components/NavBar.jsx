@@ -22,9 +22,12 @@ const NavBar = () => {
       >
         About Me
       </Link>
-      <div className="relative text-sm w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500">
+      <Link
+        to="/contact"
+        className="relative text-sm w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
+      >
         Contact Me
-      </div>
+      </Link>
       <div className="relative text-sm w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500">
         <a
           href="https://www.academlo.com"
