@@ -26,7 +26,7 @@ const Root = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 400) {
+      if (window.innerWidth < 620) {
         setBgImg(mobileImg);
       } else {
         setBgImg(desktopImg);
@@ -41,7 +41,7 @@ const Root = () => {
   }, []);
 
   function getNav() {
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 620) {
       localStorage.setItem("navbarOpen", isOpen);
       return <NavBarMobile open={isOpen} onToggle={toggleOpen} />;
     }
