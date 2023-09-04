@@ -55,7 +55,7 @@ const Root = () => {
     <main className="bg-cover bg-no-repeat h-full w-full" ref={ref}>
       <img className="w-full" src={bgImg} />
       <section>{getNav()}</section>
-      <section className="absolute flex flex-row flex-wrap left-[5rem] top-[7rem]">
+      <section className="absolute flex flex-row flex-wrap left-[4rem] top-[7rem]">
         {" "}
         <h2 className="relative text-2xl font-bold text-cyan-400 md:text-sm">
           Hi!
@@ -67,10 +67,12 @@ const Root = () => {
           I am Gustavo Molano {txt1}
         </h1>
       </section>
-      <Animation1 />
+      <div className="relative left-[20rem] top-[2rem]">
+        <Animation1 />
+      </div>
       <section
         id="projects"
-        className="absolute top-[11.9rem] left-[2rem] bg-emerald-100
+        className="absolute top-[12.5rem] left-[2rem] bg-emerald-100
       w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px]"
       >
         <a
