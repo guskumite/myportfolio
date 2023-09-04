@@ -57,17 +57,17 @@ const Root = () => {
       <section>{getNav()}</section>
       <section className="absolute flex flex-row flex-wrap left-[4rem] top-[7rem]">
         {" "}
-        <h2 className="relative text-2xl font-bold text-cyan-400 md:text-sm">
+        <h2 className="relative lg:text-2xl font-bold text-cyan-400 md:text-sm">
           Hi!
         </h2>
-        <h2 className="px-4 relative text-2xl text-zinc-300 md:text-sm">
+        <h2 className="px-4 relative lg:text-2xl text-zinc-300 md:text-sm">
           I am a Dev
         </h2>
-        <h1 className="relative text-xl text-zinc-400 md:text-sm">
+        <h1 className="relative lg:text-xl text-zinc-400 md:text-sm">
           I am Gustavo Molano {txt1}
         </h1>
       </section>
-      <div className="absolute left-[5rem] top-[2rem] md:w-[40%]">
+      <div className="absolute lg:left-[10rem] top-[2rem] md:left-[5rem]">
         <Animation1 />
       </div>
       <section
