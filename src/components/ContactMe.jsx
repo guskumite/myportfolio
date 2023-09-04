@@ -21,7 +21,7 @@ const ContactMe = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 400) {
+      if (window.innerWidth < 620) {
         setBgImg(mobileImg);
       } else {
         setBgImg(desktopImg);
@@ -36,7 +36,7 @@ const ContactMe = () => {
   }, []);
 
   function getNav() {
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 620) {
       localStorage.setItem("navbarOpen", isOpen);
       return (
         <section className="absolute w-full top-[1rem]">

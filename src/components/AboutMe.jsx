@@ -21,7 +21,7 @@ const AboutMe = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 400) {
+      if (window.innerWidth < 620) {
         setBgImg(mobileImg);
       } else {
         setBgImg(desktopImg);
@@ -36,7 +36,7 @@ const AboutMe = () => {
   }, []);
 
   function getNav() {
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 620) {
       localStorage.setItem("navbarOpen", isOpen);
       return (
         <section className="absolute w-full top-[1rem]">
@@ -71,7 +71,9 @@ const AboutMe = () => {
           recent trip to Las Vegas and Phoenix.
         </p>
         <img className="ml-8 w-[10rem] h-[15rem] mt-4" src={imgTrip} />
-        <Animation1 />
+        <div className="relative left-[20rem] top-[4rem]">
+          <Animation1 />
+        </div>
       </section>
     </main>
   );

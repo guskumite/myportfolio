@@ -53,13 +53,17 @@ const Root = () => {
 
   return (
     <main className="bg-cover bg-no-repeat h-full w-full" ref={ref}>
-      <img src={bgImg} />
+      <img className="w-full" src={bgImg} />
       <section>{getNav()}</section>
       <section className="absolute flex flex-row flex-wrap left-[5rem] top-[7rem]">
         {" "}
-        <h2 className="relative text-2xl font-bold text-cyan-400">Hi!</h2>
-        <h2 className="px-4 relative text-2xl text-zinc-300">I am a Dev</h2>
-        <h1 className="relative text-xl text-zinc-400">
+        <h2 className="relative text-2xl font-bold text-cyan-400 md:text-sm">
+          Hi!
+        </h2>
+        <h2 className="px-4 relative text-2xl text-zinc-300 md:text-sm">
+          I am a Dev
+        </h2>
+        <h1 className="relative text-xl text-zinc-400 md:text-sm">
           I am Gustavo Molano {txt1}
         </h1>
       </section>
