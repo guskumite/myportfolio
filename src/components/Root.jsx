@@ -67,13 +67,13 @@ const Root = () => {
           I am Gustavo Molano {txt1}
         </h1>
       </section>
-      <div className="relative left-[5rem] top-[2rem] md:w-[40%]">
+      <div className="absolute left-[5rem] top-[2rem] md:w-[40%]">
         <Animation1 />
       </div>
       <section
         id="projects"
         className="absolute top-[12.5rem] left-[2rem] bg-emerald-100
-      w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px] md:w-[40%]"
+      w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px] md:w-[30%] md:top-[15rem]"
       >
         <a
           className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
