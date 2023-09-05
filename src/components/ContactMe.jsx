@@ -1,11 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import mobileImg from "../assets/mobile.png";
 import desktopImg from "../assets/desktop.png";
 import "../App.css";
-import Animation1 from "./Animation1";
 import NavBar from "./NavBar";
 import NavBarMobile from "./NavBarMobile";
-import { Link } from "react-router-dom";
+import map1 from "../assets/maps1.png";
 
 const ContactMe = () => {
   const [bgImg, setBgImg] = useState();
@@ -13,43 +12,39 @@ const ContactMe = () => {
     localStorage.getItem("navbarOpen") === "true" ? true : false
   );
 
-  const ref = useRef(null);
-
   function toggleOpen() {
     setIsOpen(!isOpen);
+    localStorage.setItem("navbarOpen", isOpen);
   }
 
+  const handleResize = () => {
+    if (window.innerWidth < 600) {
+      setBgImg(mobileImg);
+    } else {
+      setBgImg(desktopImg);
+    }
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 620) {
-        setBgImg(mobileImg);
-      } else {
-        setBgImg(desktopImg);
-      }
+    handleResize();
+    const onResize = () => {
+      handleResize();
     };
 
-    const observer = new ResizeObserver(handleResize);
-    observer.observe(ref.current);
+    window.addEventListener("resize", onResize);
+
     return () => {
-      observer.disconnect();
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   function getNav() {
-    if (window.innerWidth < 620) {
+    if (window.innerWidth < 600) {
       localStorage.setItem("navbarOpen", isOpen);
-      return (
-        <section className="absolute w-full top-[1rem]">
-          <NavBarMobile open={isOpen} onToggle={toggleOpen} />{" "}
-        </section>
-      );
+      return <NavBarMobile open={isOpen} onToggle={toggleOpen} />;
+    } else {
+      return <NavBar />;
     }
-
-    return (
-      <section className="absolute w-full top-[1rem]">
-        <NavBar />{" "}
-      </section>
-    );
   }
 
   const handleSubmit = (e) => {
@@ -66,13 +61,21 @@ const ContactMe = () => {
   };
 
   return (
-    <main ref={ref}>
+    <main>
       {getNav()}
       <img
-        className="absolute top-[1rem] z-[-1] opacity-30 min-w-[320px] w-full"
+        className="absolute top-[0rem] z-[-1] opacity-30 min-w-[320px] w-full"
         src={bgImg}
       />
       <section className="mt-32 h-screen bg-cover bg-no-repeat relative w-full ml-[1.9rem]">
+        <a
+          className="absolute top-[21rem] left-[9rem] h-[60%] w-[40%]"
+          href="https://www.google.com/maps/@4.6787691,-74.0621004,16z?hl=es&entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="w-full" src={map1} />
+        </a>
         <ul className="absolute left-[2rem] top-[3.5rem] text-md">
           <li className="ml-[2.3rem] mb-[0.5rem]">Name:</li>
           <li className="ml-[2.4rem]">Email:</li>
@@ -85,7 +88,7 @@ const ContactMe = () => {
           <h2 className="ml-[39%] font-bold text-lg mb-2">Contact Me</h2>
           <div className="w-[45%] ml-32 border-2 border-zinc-500 border-solid grid grid-rows-[4]">
             <input
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
               autoComplete="off"
               required
               placeholder="Enter your name please ..."
@@ -93,7 +96,7 @@ const ContactMe = () => {
               type="text"
             />
             <input
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
               autoComplete="off"
               required
               placeholder="Enter your preferred Email ..."
@@ -101,7 +104,7 @@ const ContactMe = () => {
               type="text"
             />
             <textarea
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder text-lg"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
               rows={4}
               autoComplete="off"
               required
@@ -111,7 +114,7 @@ const ContactMe = () => {
             />
             <button
               className="ml-[25%] mt-4 mb-4 bg-cyan-600 w-[5rem] text-black text-lg border-solid border-gray-400 md:ml-[10%]
-             md:w-3/4"
+                 md:w-3/4 md:text-sm"
             >
               Send message
             </button>

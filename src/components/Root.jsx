@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import mobileImg from "../assets/mobile.png";
 import desktopImg from "../assets/desktop.png";
 import pokeIco from "../assets/pokedex_icon.png";
@@ -17,45 +17,45 @@ const Root = () => {
     localStorage.getItem("navbarOpen") === "true" ? true : false
   );
 
-  const ref = useRef(null);
-
   function toggleOpen() {
     setIsOpen(!isOpen);
     localStorage.setItem("navbarOpen", isOpen);
   }
 
+  const handleResize = () => {
+    if (window.innerWidth < 600) {
+      setBgImg(mobileImg);
+    } else {
+      setBgImg(desktopImg);
+    }
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 620) {
-        setBgImg(mobileImg);
-      } else {
-        setBgImg(desktopImg);
-      }
+    handleResize();
+    const onResize = () => {
+      handleResize();
     };
 
-    const observer = new ResizeObserver(handleResize);
-    observer.observe(ref.current);
+    window.addEventListener("resize", onResize);
+
     return () => {
-      observer.disconnect();
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   function getNav() {
-    if (window.innerWidth < 620) {
+    if (window.innerWidth < 600) {
       localStorage.setItem("navbarOpen", isOpen);
       return <NavBarMobile open={isOpen} onToggle={toggleOpen} />;
+    } else {
+      return <NavBar />;
     }
-
-    return <NavBar />;
   }
 
   const txt1 = "() => { and I Welcome you to My portfolio! }";
 
   return (
-    <main
-      className="bg-cover bg-no-repeat h-full w-full lg:max-width-[1200px] md:max-width-[619px]"
-      ref={ref}
-    >
+    <main className="bg-cover bg-no-repeat h-full w-full lg:max-width-[1200px] md:max-width-[619px]">
       <img className="w-full min-w-[320px]" src={bgImg} />
       <section>{getNav()}</section>
       <section className="absolute flex flex-row flex-wrap w-[24rem] mr-[2rem] top-[8rem] left-[2rem]">
@@ -80,8 +80,11 @@ const Root = () => {
             className="absolute top-[12.5rem] left-[2rem] bg-emerald-100
                w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px] md:w-[30%] md:top-[17rem] md:w-[20%] md:flex-col"
           >
+            <p className="text-center mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[14rem] h-[2rem] bg-zinc-300 hover:bg-amber-200 rounded-[30px]">
+              My projects so far:
+            </p>
             <a
-              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-55 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
               href="https://bodegacool.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
@@ -94,7 +97,7 @@ const Root = () => {
               </div>
             </a>
             <a
-              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-75 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
               href="https://guskumitenopokedex.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
@@ -107,7 +110,7 @@ const Root = () => {
               </div>
             </a>
             <a
-              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-75 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
               href="https://theuserscrud.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
@@ -120,7 +123,7 @@ const Root = () => {
               </div>
             </a>
             <a
-              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-75 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
               href="https://myfavoritebooksapp.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,7 +136,7 @@ const Root = () => {
               </div>
             </a>
             <a
-              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-75 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
               href="https://myfavoritebooksapp.netlify.app"
               target="_blank"
               rel="noopener noreferrer"

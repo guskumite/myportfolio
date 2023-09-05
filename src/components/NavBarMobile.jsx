@@ -22,26 +22,19 @@ function NavBarMobile({ open, onToggle }) {
       <div
         className={`${
           open ? "block" : "hidden"
-        } md:block md:static absolute md:h-auto h-[12rem] top-[4rem] left-0 md:w-auto w-full bg-cyan-400 px-4 py-4`}
+        } md:block md:static absolute md:h-auto h-[12rem] top-[4rem] left-0 md:w-[70%] w-[80%] bg-cyan-400 px-4 py-4`}
         style={{ zIndex: 9999 }}
       >
         <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/">
           {" "}
           Home{" "}
         </a>
-        <a
-          className="text-sm hover:text-cyan-700 hover:text-lg"
-          href="/#projects"
-        >
-          {" "}
-          Projects
-        </a>
         <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/about">
           {" "}
           About Me
         </a>
         <a
-          className="text-sm hover:text-cyan-700 hover:text-lg"
+          className="text-xs hover:text-cyan-700 hover:text-lg"
           href="/contact"
         >
           {" "}
