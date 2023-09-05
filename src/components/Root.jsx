@@ -101,7 +101,9 @@ const Root = () => {
             >
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={pokeIco} />
-                <p className="text-sm relative font-bold">The Pokedex </p>
+                <p className="text-sm relative font-bold">
+                  The Pokedex. It uses React Router, Redux, axios & taiwind{" "}
+                </p>
               </div>
             </a>
             <a
@@ -139,7 +141,7 @@ const Root = () => {
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={wthrIco} />
                 <p className="text-sm relative font-bold">
-                  A simple weather channel & React
+                  A simple weather channel with React
                 </p>
               </div>
             </a>
