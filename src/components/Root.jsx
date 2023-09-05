@@ -52,7 +52,10 @@ const Root = () => {
   const txt1 = "() => { and I Welcome you to My portfolio! }";
 
   return (
-    <main className="bg-cover bg-no-repeat h-full w-full" ref={ref}>
+    <main
+      className="bg-cover bg-no-repeat h-full w-full lg:max-width-[1200px] md:max-width-[619px]"
+      ref={ref}
+    >
       <img className="w-full" src={bgImg} />
       <section>{getNav()}</section>
       <section className="absolute flex flex-row flex-wrap left-[4rem] top-[7rem]">
@@ -64,10 +67,13 @@ const Root = () => {
           I am a Dev
         </h2>
         <h1 className="relative lg:text-xl text-zinc-400 md:text-sm">
-          I am Gustavo Molano {txt1}
+          I am Gustavo Molano
         </h1>
+        <h2 className="relative lg:text-xl text-zinc-400 md:text-sm">
+          {txt1}{" "}
+        </h2>
       </section>
-      <div className="absolute lg:left-[10rem] top-[2rem] md:left-[5rem]">
+      <div className="relative lg:left-[10rem] top-[2rem] md:left-[5rem]">
         <Animation1 />
       </div>
       <section
