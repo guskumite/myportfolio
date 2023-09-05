@@ -89,7 +89,7 @@ const Root = () => {
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={clothIco} />
                 <p className="text-sm relative w-[9rem] font-bold">
-                  A clothing store
+                  A store made with HTML, Javascript and CSS
                 </p>
               </div>
             </a>
@@ -113,7 +113,7 @@ const Root = () => {
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={crudIco} />
                 <p className="text-sm relative font-bold">
-                  User's CRUD with API
+                  User's CRUD with API, axios & tailwind
                 </p>
               </div>
             </a>
@@ -126,7 +126,7 @@ const Root = () => {
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={amznIco} />
                 <p className="text-sm relative font-bold">
-                  A real Amazon bookstore funnel
+                  A real Amazon bookstore funnel with vite & React
                 </p>
               </div>
             </a>
@@ -139,7 +139,7 @@ const Root = () => {
               <div>
                 <img className="ml-[20%] w-[4rem] h-[4rem]" src={wthrIco} />
                 <p className="text-sm relative font-bold">
-                  A simple weather channel
+                  A simple weather channel & React
                 </p>
               </div>
             </a>
