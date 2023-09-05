@@ -68,16 +68,19 @@ const ContactMe = () => {
   return (
     <main ref={ref}>
       {getNav()}
-      <img className="absolute top-[1rem] z-[-1] opacity-30" src={bgImg} />
-      <section className="mt-16 h-screen bg-cover bg-no-repeat relative w-full">
+      <img
+        className="absolute top-[1rem] z-[-1] opacity-30 min-w-[320px] w-full"
+        src={bgImg}
+      />
+      <section className="mt-32 h-screen bg-cover bg-no-repeat relative w-full ml-[1.9rem]">
         <ul className="absolute left-[2rem] top-[3.5rem] text-md">
-          <li className="mb-[0.5rem]">Name:</li>
-          <li>Email:</li>
-          <li>Message:</li>
+          <li className="ml-[2.3rem] mb-[0.5rem]">Name:</li>
+          <li className="ml-[2.4rem]">Email:</li>
+          <li className="ml-[1.1rem]">Message:</li>
         </ul>
         <form
           onSubmit={handleSubmit}
-          className="mt-4 absolute border-zinc-500 w-full md:w-3/4 lg:w-1/2"
+          className="mt-4 absolute border-zinc-500 w-full md:w-3/4"
         >
           <h2 className="ml-[39%] font-bold text-lg mb-2">Contact Me</h2>
           <div className="w-[45%] ml-32 border-2 border-zinc-500 border-solid grid grid-rows-[4]">
@@ -98,7 +101,7 @@ const ContactMe = () => {
               type="text"
             />
             <textarea
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[15rem] bg-[lightblue] border-solid custom-placeholder text-lg"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder text-lg"
               rows={4}
               autoComplete="off"
               required
@@ -106,12 +109,18 @@ const ContactMe = () => {
               id="Message"
               type="text"
             />
-            <button className="ml-[15%] mt-4 mb-4 bg-cyan-600 w-32 text-black text-lg border-solid border-gray-400 md:ml-[10%] lg:ml-[20%] md:w-3/4 lg:w-1/2">
+            <button
+              className="ml-[25%] mt-4 mb-4 bg-cyan-600 w-[5rem] text-black text-lg border-solid border-gray-400 md:ml-[10%]
+             md:w-3/4"
+            >
               Send message
             </button>
-            <p className="absolute top-[0.1rem] left-[1rem]"> Follow me on: </p>
+            <p className="absolute top-[-1.5rem] left-[8rem]">
+              {" "}
+              Follow me on:{" "}
+            </p>
             <a
-              className="w-[1rem] absolute top-[0.1rem] left-[7.8rem]"
+              className="w-[1rem] absolute top-[-1.5rem] left-[14.8rem]"
               href="https://www.facebook.com/guskumite/"
               target="_blank"
               rel="noopener noreferrer"
@@ -123,7 +132,7 @@ const ContactMe = () => {
               ></box-icon>
             </a>
             <a
-              className="w-[1rem] absolute top-[0.1rem] left-[9.3rem]"
+              className="w-[1rem] absolute top-[-1.5rem] left-[16.3rem]"
               href="https://www.instagram.com/guskumite/"
               target="_blank"
               rel="noopener noreferrer"
@@ -133,9 +142,6 @@ const ContactMe = () => {
             </a>
           </div>
         </form>
-        <div className="relative left-[-45rem] top-[2rem]">
-          <Animation1 />
-        </div>
       </section>
     </main>
   );

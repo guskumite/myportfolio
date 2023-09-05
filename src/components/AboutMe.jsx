@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import mobileImg from "../assets/mobile.png";
 import desktopImg from "../assets/desktop.png";
 import "../App.css";
-import Animation1 from "./Animation1";
 import NavBar from "./NavBar";
 import NavBarMobile from "./NavBarMobile";
 
@@ -17,6 +16,7 @@ const AboutMe = () => {
 
   function toggleOpen() {
     setIsOpen(!isOpen);
+    localStorage.setItem("navbarOpen", isOpen);
   }
 
   useEffect(() => {
@@ -38,27 +38,25 @@ const AboutMe = () => {
   function getNav() {
     if (window.innerWidth < 620) {
       localStorage.setItem("navbarOpen", isOpen);
-      return (
-        <section className="absolute w-full top-[1rem]">
-          <NavBarMobile open={isOpen} onToggle={toggleOpen} />{" "}
-        </section>
-      );
+      return <NavBarMobile open={isOpen} onToggle={toggleOpen} />;
+    } else {
+      return <NavBar />;
     }
-
-    return (
-      <section className="absolute w-full top-[1rem]">
-        <NavBar />{" "}
-      </section>
-    );
   }
 
   return (
-    <main className="bg-cover bg-no-repeat h-full w-full" ref={ref}>
+    <main
+      className="bg-cover bg-no-repeat h-full w-full max-width-[1200px] md:max-width-[619px]"
+      ref={ref}
+    >
       {getNav()}
-      <img className="absolute top-[1rem] z-[-1] opacity-30" src={bgImg} />
+      <img
+        className="absolute top-[1rem] z-[-1] opacity-30 min-w-[320px] w-full"
+        src={bgImg}
+      />
       <section className="w-[84%] absolute top-[4rem]">
-        <h2 className="ml-4 text-lg mt-4 mb-4 text-bold">About Me</h2>
-        <p className="ml-8 w-full text-justify mr-4">
+        <h2 className="ml-4 text-md mt-16 mb-4 text-bold">About Me</h2>
+        <p className="ml-8 text-justify mr-4">
           Hi again! My name is Gustavo Molano and I was born in Bogota,
           Colombia. I love programming and I began programming when I was 12
           years old. Now, in 2023, I am 54. I studied in Mexico an IT career
@@ -71,9 +69,6 @@ const AboutMe = () => {
           recent trip to Las Vegas and Phoenix.
         </p>
         <img className="ml-8 w-[10rem] h-[15rem] mt-4" src={imgTrip} />
-        <div className="relative left-[20rem] top-[4rem]">
-          <Animation1 />
-        </div>
       </section>
     </main>
   );

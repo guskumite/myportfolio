@@ -56,9 +56,9 @@ const Root = () => {
       className="bg-cover bg-no-repeat h-full w-full lg:max-width-[1200px] md:max-width-[619px]"
       ref={ref}
     >
-      <img className="w-full" src={bgImg} />
+      <img className="w-full min-w-[320px]" src={bgImg} />
       <section>{getNav()}</section>
-      <section className="absolute flex flex-row flex-wrap left-[4rem] top-[7rem]">
+      <section className="absolute flex flex-row flex-wrap w-[24rem] mr-[2rem] top-[8rem] left-[2rem]">
         {" "}
         <h2 className="relative lg:text-2xl font-bold text-cyan-400 md:text-sm">
           Hi!
@@ -73,75 +73,81 @@ const Root = () => {
           {txt1}{" "}
         </h2>
       </section>
-      <div className="relative lg:left-[10rem] top-[2rem] md:left-[5rem]">
-        <Animation1 />
-      </div>
-      <section
-        id="projects"
-        className="absolute top-[12.5rem] left-[2rem] bg-emerald-100
-      w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px] md:w-[30%] md:top-[15rem]"
-      >
-        <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
-          href="https://bodegacool.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <img className="ml-[20%] w-[4rem] h-[4rem]" src={clothIco} />
-            <p className="text-sm relative w-[9rem] font-bold">
-              A clothing store
-            </p>
+      <section>
+        <div className="flex justify-between">
+          <div
+            id="projects"
+            className="absolute top-[12.5rem] left-[2rem] bg-emerald-100
+               w-[60%] h-[auto] flex flex-row flex-wrap align-items rounded-[30px] md:w-[30%] md:top-[17rem] md:w-[20%] md:flex-col"
+          >
+            <a
+              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              href="https://bodegacool.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img className="ml-[20%] w-[4rem] h-[4rem]" src={clothIco} />
+                <p className="text-sm relative w-[9rem] font-bold">
+                  A clothing store
+                </p>
+              </div>
+            </a>
+            <a
+              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              href="https://guskumitenopokedex.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img className="ml-[20%] w-[4rem] h-[4rem]" src={pokeIco} />
+                <p className="text-sm relative font-bold">The Pokedex </p>
+              </div>
+            </a>
+            <a
+              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              href="https://theuserscrud.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img className="ml-[20%] w-[4rem] h-[4rem]" src={crudIco} />
+                <p className="text-sm relative font-bold">
+                  User's CRUD with API
+                </p>
+              </div>
+            </a>
+            <a
+              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              href="https://myfavoritebooksapp.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img className="ml-[20%] w-[4rem] h-[4rem]" src={amznIco} />
+                <p className="text-sm relative font-bold">
+                  A real Amazon bookstore funnel
+                </p>
+              </div>
+            </a>
+            <a
+              className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
+              href="https://myfavoritebooksapp.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img className="ml-[20%] w-[4rem] h-[4rem]" src={wthrIco} />
+                <p className="text-sm relative font-bold">
+                  A simple weather channel
+                </p>
+              </div>
+            </a>
           </div>
-        </a>
-        <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
-          href="https://guskumitenopokedex.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <img className="ml-[20%] w-[4rem] h-[4rem]" src={pokeIco} />
-            <p className="text-sm relative font-bold">The Pokedex </p>
-          </div>
-        </a>
-        <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
-          href="https://theuserscrud.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <img className="ml-[20%] w-[4rem] h-[4rem]" src={crudIco} />
-            <p className="text-sm relative font-bold">User's CRUD with API</p>
-          </div>
-        </a>
-        <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
-          href="https://myfavoritebooksapp.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <img className="ml-[20%] w-[4rem] h-[4rem]" src={amznIco} />
-            <p className="text-sm relative font-bold">
-              A real Amazon bookstore funnel
-            </p>
-          </div>
-        </a>
-        <a
-          className="mt-[1rem] ml-[1rem] mb-[1rem] opacity-75 w-[8rem] h-[8rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
-          href="https://myfavoritebooksapp.netlify.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <img className="ml-[20%] w-[4rem] h-[4rem]" src={wthrIco} />
-            <p className="text-sm relative font-bold">
-              A simple weather channel
-            </p>
-          </div>
-        </a>
+        </div>
+        <div>
+          <Animation1 />
+        </div>
       </section>
     </main>
   );
