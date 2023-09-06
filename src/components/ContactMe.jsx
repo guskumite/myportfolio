@@ -74,7 +74,7 @@ const ContactMe = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img className="w-full" src={map1} />
+          <img className="w-full hover:w-[80%]" src={map1} />
         </a>
         <ul className="absolute left-[2rem] top-[3.5rem] text-md">
           <li className="ml-[2.3rem] mb-[0.5rem]">Name:</li>
@@ -88,7 +88,8 @@ const ContactMe = () => {
           <h2 className="ml-[39%] font-bold text-lg mb-2">Contact Me</h2>
           <div className="w-[45%] ml-32 border-2 border-zinc-500 border-solid grid grid-rows-[4]">
             <input
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg
+               md:text-sm hover:bg-blue-300"
               autoComplete="off"
               required
               placeholder="Enter your name please ..."
@@ -96,7 +97,8 @@ const ContactMe = () => {
               type="text"
             />
             <input
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] bg-[lightblue] border-solid custom-placeholder text-lg
+               md:text-sm hover:bg-blue-300"
               autoComplete="off"
               required
               placeholder="Enter your preferred Email ..."
@@ -104,7 +106,8 @@ const ContactMe = () => {
               type="text"
             />
             <textarea
-              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder text-lg md:text-sm"
+              className="ml-[2%] w-[89%] mt-[1%] mb-[1%] h-[7rem] bg-[lightblue] border-solid custom-placeholder
+               text-lg md:text-sm hover:bg-blue-300"
               rows={4}
               autoComplete="off"
               required
@@ -114,11 +117,11 @@ const ContactMe = () => {
             />
             <button
               className="ml-[25%] mt-4 mb-4 bg-cyan-600 w-[5rem] text-black text-lg border-solid border-gray-400 md:ml-[10%]
-                 md:w-3/4 md:text-sm"
+                 md:w-3/4 md:text-sm hover:bg-blue-300"
             >
               Send message
             </button>
-            <p className="absolute top-[-1.5rem] left-[8rem]">
+            <p className="absolute top-[-1.5rem] left-[8rem] hover:bg-blue-300">
               {" "}
               Follow me on:{" "}
             </p>
@@ -141,7 +144,24 @@ const ContactMe = () => {
               rel="noopener noreferrer"
             >
               {" "}
-              <box-icon type="logo" name="instagram"></box-icon>
+              <box-icon
+                type="logo"
+                className="w-[1rem] h-[1rem]"
+                name="instagram"
+              ></box-icon>
+            </a>
+            <a
+              className="w-[1rem] absolute top-[-1.5rem] left-[17.8rem]"
+              href="https://www.linkedin.com/in/gustavo-alberto-molano-ruiz-735a564/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <box-icon
+                type="logo"
+                className="w-[1rem] h-[1rem]"
+                name="linkedin-square"
+              ></box-icon>
             </a>
           </div>
         </form>
