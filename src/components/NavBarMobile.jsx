@@ -1,4 +1,12 @@
-function NavBarMobile({ open, onToggle }) {
+function NavBarMobile({
+  open,
+  onToggle,
+  home,
+  about,
+  skills,
+  contact,
+  academlo,
+}) {
   console.log(open);
   return (
     <div className="flex absolute top-[2rem] right-[1.8rem] w-[8rem]">
@@ -27,18 +35,22 @@ function NavBarMobile({ open, onToggle }) {
       >
         <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/">
           {" "}
-          Home{" "}
+          {home}
         </a>
         <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/about">
           {" "}
-          About Me
+          {about}
+        </a>
+        <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/skills">
+          {" "}
+          {skills}
         </a>
         <a
           className="text-xs hover:text-cyan-700 hover:text-lg"
           href="/contact"
         >
           {" "}
-          Contact Me
+          {contact}
         </a>
         <a
           className="text-sm hover:text-cyan-700 hover:text-lg"
@@ -47,7 +59,7 @@ function NavBarMobile({ open, onToggle }) {
           rel="noopener noreferrer"
         >
           {" "}
-          Academlo
+          {academlo}
         </a>
       </div>
     </div>

@@ -1,39 +1,39 @@
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ home, about, skills, contact, academlo }) => {
   return (
-    <section className="flex flex-row flex-wrap w-[90%] absolute top-[2rem] left-[9.5rem]">
+    <section className="flex flex-col flex-wrap w-[90%] gap-8 absolute top-[6rem] left-[4.5rem]">
       <Link
         to="/"
-        className="relative text-lg w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
+        className="relative text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-zinc-500"
       >
-        Home
+        {home}
       </Link>
       <Link
         to="/about"
-        className="relative text-lg w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
+        className="relative text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-zinc-500"
       >
-        About Me
+        {about}
       </Link>
       <Link
-        to="/"
-        className="relative text-lg w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
+        to="/skills"
+        className="relative text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-zinc-500"
       >
-        Skills
+        {skills}
       </Link>
       <Link
         to="/contact"
-        className="relative animate-text-slide text-lg w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500"
+        className="relative animate-text-slide text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-cyan-500"
       >
-        Contact Me
+        {contact}
       </Link>
-      <div className="relative text-lg w-[7rem] text-slate-50 hover:text-md hover:text-cyan-500">
+      <div className="relative text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-cyan-500">
         <a
           href="https://www.academlo.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Academlo{" "}
+          {academlo}
         </a>
       </div>
     </section>

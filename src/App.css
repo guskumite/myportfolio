@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 body {
-  font-family: "Sen", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Sen",
+    sans-serif;
+}
+
+/* Estilo para la imagen cuando la pantalla es más ancha que 600px */
+img.imgTrip {
+  width: 15rem;
+  height: 20rem;
+  opacity: 80;
+}
+
+/* Media query para pantallas más estrechas que 600px */
+@media (max-width: 600px) {
+  img.imgTrip {
+    width: 15rem;
+    height: 15rem; /* Reduce la altura para pantallas estrechas */
+    opacity: 80;
+  }
 }

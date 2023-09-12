@@ -1,4 +1,6 @@
-import imgTrip from "../assets/mytoon.jpg";
+import imgTrip from "../assets/mytoon.png";
+import usFlag from "../assets/flag-united-states_1f1fa-1f1f8.png";
+import esFlag from "../assets/flag-spain_1f1ea-1f1f8.png";
 import { useEffect, useState } from "react";
 import mobileImg from "../assets/mobile.png";
 import desktopImg from "../assets/desktop.png";
@@ -12,6 +14,8 @@ const AboutMe = () => {
     localStorage.getItem("navbarOpen") === "true" ? true : false
   );
   const [Labels, setLabels] = useState(0);
+  const [Dark, setDark] = useState(0);
+  const [Left, setLeft] = useState("translate-x-[8rem]");
 
   function toggleOpen() {
     setIsOpen(!isOpen);
@@ -56,12 +60,19 @@ const AboutMe = () => {
       "me ha brindado la oportunidad de actualizar y desarrollar mis habilidades profesionales " +
       "para convertirme en una mejor versión de mi mismo.",
   ];
+  const Home = ["Home", "Inicio"];
+  const About = ["About", "Acerca de mi"];
+  const Skills = ["Skills", "Experiencia"];
+  const Contact = ["Contact Me", "Contacto"];
+  const Academlo = ["Academlo", "Academlo"];
 
   const handleResize = () => {
     if (window.innerWidth < 600) {
       setBgImg(mobileImg);
+      setLeft("translate-x-[1rem]");
     } else {
       setBgImg(desktopImg);
+      setLeft("translate-x-[8rem]");
     }
   };
 
@@ -81,9 +92,27 @@ const AboutMe = () => {
   function getNav() {
     if (window.innerWidth < 600) {
       localStorage.setItem("navbarOpen", isOpen);
-      return <NavBarMobile open={isOpen} onToggle={toggleOpen} />;
+      return (
+        <NavBarMobile
+          open={isOpen}
+          onToggle={toggleOpen}
+          home={Home[Labels]}
+          about={About[Labels]}
+          skills={Skills[Labels]}
+          contact={Contact[Labels]}
+          academlo={Academlo[Labels]}
+        />
+      );
     } else {
-      return <NavBar />;
+      return (
+        <NavBar
+          home={Home[Labels]}
+          about={About[Labels]}
+          skills={Skills[Labels]}
+          contact={Contact[Labels]}
+          academlo={Academlo[Labels]}
+        />
+      );
     }
   }
 
@@ -96,32 +125,53 @@ const AboutMe = () => {
     }
   };
 
+  const handleDark = () => {
+    if (Dark === 0) {
+      setDark(1);
+    }
+    if (Dark === 1) {
+      setDark(0);
+    }
+  };
+
   return (
-    <main className="bg-cover bg-no-repeat h-full w-full max-width-[1200px] md:max-width-[619px]">
-      {getNav()}
-      <img
-        className="absolute top-[0rem] z-[-1] opacity-30 min-w-[320px] w-full"
-        src={bgImg}
-      />
-      <p className="ml-8 absolute animate-text-slide text-md top-[6rem]">
-        Click en texto para cambiar idioma; Click on text to change language
-        👇👇👇👇
-      </p>
+    <main className="absolute top-[0rem] bg-cover h-screen w-screen text-gray-400">
+      <img className="w-full min-w-[320px] opacity-80" src={bgImg} />
+      <section> {getNav()} </section>
+      <div className="flex flex-rows">
+        <button
+          className="border-2 ml-8 absolute text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows"
+          onClick={handleLang}
+        >
+          Language | Idioma <img className="w-[2rem] h-[2rem]" src={usFlag} />{" "}
+          <img className="w-[2rem] h-[2rem]" src={esFlag} />
+        </button>
+        <button
+          className="border-2 ml-8 absolute text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows"
+          onClick={handleDark}
+        >
+          Darkmode | Modo oscuro 🌞🌛
+        </button>
+      </div>
       <h2
-        className="ml-12 text-md mt-32 mb-4 text-3xl text-bold hover:text-4xl"
+        className={`absolute ml-72 text-md mt-32 mb-4 font-bold text-3xl text-bold hover:text-4xl
+        top-[3rem] ${Left}`}
         onClick={handleLang}
       >
         {label1[Labels]}
       </h2>
-      <section className="w-[94%] absolute top-[10rem] flex flex-rows mt-8">
+      <div
+        className={`absolute grid grid-cols-[2fr,3fr,2fr] ${Left} top-[14rem]`}
+      >
+        <img className="opacity-80 imgTrip" src={imgTrip} />
         <p
-          className="ml-8 text-justify mr-4 w-[75%] text-lg hover:text-2xl"
+          className="text-justify text-lg hover:text-2xl translate-x-[-3/4]"
           onClick={handleLang}
         >
           {label2[Labels]}
         </p>
-        <img className="ml-8 w-[20rem] h-[25rem] opacity-[70%]" src={imgTrip} />
-      </section>
+        <span className="hidden">x</span>
+      </div>
     </main>
   );
 };
