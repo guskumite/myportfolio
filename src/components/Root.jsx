@@ -26,7 +26,7 @@ const Root = () => {
 
   const Home = ["Home", "Inicio"];
   const About = ["About", "Acerca de mi"];
-  const Skills = ["Skills", "Experiencia"];
+  const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
 
