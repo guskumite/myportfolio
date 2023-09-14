@@ -36,6 +36,8 @@ const Skills = () => {
     "Persistencia en el logro de objetivos",
   ];
   const label9 = ["Analytic Thinking", "Pensamiento analítico"];
+  const labelA = ["Self learning", "Autoaprendizaje"];
+  const labelB = ["Self management", "Autogestión"];
 
   const Home = ["Home", "Inicio"];
   const About = ["About", "Acerca de mi"];
@@ -145,6 +147,8 @@ const Skills = () => {
           <li className="border-2 border-red-300">{label7[Labels]}</li>
           <li className="border-2 border-red-300">{label8[Labels]}</li>
           <li className="border-2 border-red-300">{label9[Labels]}</li>
+          <li className="border-2 border-red-300">{labelA[Labels]}</li>
+          <li className="border-2 border-red-300">{labelB[Labels]}</li>
         </ul>
       </div>
     </main>

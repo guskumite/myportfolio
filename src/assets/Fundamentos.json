@@ -1,0 +1,17 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "type": "Assertion",
+  "id": "https://api-lb.appfurther.io/v2/ims/83545887387550",
+  "badge": "https://api-lb.appfurther.io/v2/ims/badgeClass/83545887387550",
+  "image": "https://api-lb.appfurther.io/v2/ims/image/83545887387550",
+  "verification": {
+    "type": "HostedBadge"
+  },
+  "issuedOn": "2023-07-22T00:00:00.000Z",
+  "recipient": {
+    "type": "email",
+    "hashed": false,
+    "identity": "gmolanoruiz2000@gmail.com"
+  },
+  "evidence": []
+}

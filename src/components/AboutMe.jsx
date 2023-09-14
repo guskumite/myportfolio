@@ -26,8 +26,8 @@ const AboutMe = () => {
   const label2 = [
     "Hi again! My name is Gustavo Molano and I was born in Bogota," +
       "Colombia. I love programming and I began programming when I was 12" +
-      "years old. In the eighties and nineties of past century I studied my" +
-      "IT career at Anahuac University in Mexico City. When I finished my career " +
+      " years old. In the eighties and nineties of past century I studied my" +
+      " IT career at Anahuac University in Mexico City. When I finished my career " +
       "I worked for an IT company in Atizapan de Zaragoza called Prisma " +
       "Software. Then I worked for Grupo Videovisa the owner of the " +
       "Videocentros from 1996 to 2001. Later on, I worked for the mexican " +
@@ -36,15 +36,15 @@ const AboutMe = () => {
       "2009, I worked for a colombian IT company called Acies from 2009 to " +
       "2017. My main work had to do with learning the functionality of the " +
       "Academic System to later explain it to customers in training sessions." +
-      "I also created SQL sentences in oracle SQL to later design reports in " +
+      " I also created SQL sentences in oracle SQL to later design reports in " +
       "jasper reports for the Academic system developed using oracle forms 6i " +
       "and later migrated to Google Web Tools. Since 2017 to date I have " +
       "worked in other jobs not related to my career and in 2023 I found " +
       "Academlo. Academlo brings to me the opportunity to refresh and develop " +
       "my professional skills to become a better version of myself.",
     "¡Hola nuevamente! Mi nombre es Gustavo Molano y nací en Bogotá, Colombia." +
-      "Me encanta programar y comencé a programar cuando tenía 12 años." +
-      "En los ochenta y noventa del siglo pasado estudié mi carrera de Informática " +
+      " Me encanta programar y comencé a programar cuando tenía 12 años." +
+      " En los ochenta y noventa del siglo pasado estudié mi carrera de Informática " +
       "en la Universidad Anáhuac en Ciudad de México. Cuando me gradué de mi carrera " +
       "trabajé para una empresa IT en Atizapán de Zaragoza llamada Prisma Software. " +
       "Después trabajé para Grupo Videovisa, la dueña de los Videocentros, de 1996 a 2001. " +
@@ -53,8 +53,8 @@ const AboutMe = () => {
       "Colombia en el 2009, trabajé para una empresa colombiana de IT llamada Acies de 2009 a " +
       "2017. Mi trabajo tenía que ver con aprender la funcionalidad del sistema Académico para " +
       "posteriormente poder explicarlo a los clientes en sesiones de capacitación." +
-      "También realicé consultas SQL en el SQL de oracle para posteriormente diseñar reportes " +
-      "en jasper reports para el sistema académico que estaba diseñado en oracle forms 6i y " +
+      " También realicé consultas SQL en el SQL de oracle para posteriormente diseñar reportes " +
+      "en jasper reports para el sistema académico el cual estaba diseñado en oracle forms 6i y " +
       "después fue migrado a Google Web Tools. Desde 2017 a la fecha he trabajado en otras " +
       "actividades que no se relacionan con mi carrera y en 2023 encontré Academlo. Academlo " +
       "me ha brindado la oportunidad de actualizar y desarrollar mis habilidades profesionales " +
@@ -154,7 +154,7 @@ const AboutMe = () => {
         </button>
       </div>
       <h2
-        className={`absolute ml-72 text-md mt-32 mb-4 font-bold text-3xl text-bold hover:text-4xl
+        className={`absolute ml-72 text-md mt-32 mb-4 font-bold text-3xl text-zinc-300 text-bold hover:text-4xl
         top-[3rem] ${Left}`}
         onClick={handleLang}
       >
@@ -165,7 +165,7 @@ const AboutMe = () => {
       >
         <img className="opacity-80 imgTrip" src={imgTrip} />
         <p
-          className="text-justify text-lg hover:text-2xl translate-x-[-3/4]"
+          className="text-justify text-lg hover:text-2xl text-zinc-300 translate-x-[-3/4]"
           onClick={handleLang}
         >
           {label2[Labels]}

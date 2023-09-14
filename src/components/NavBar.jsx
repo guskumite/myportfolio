@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = ({ home, about, skills, contact, academlo }) => {
   return (
-    <section className="flex flex-col flex-wrap w-[90%] gap-8 absolute top-[6rem] left-[4.5rem]">
+    <section className="flex flex-col flex-wrap w-[90%] gap-8 absolute top-[6rem] left-[2rem]">
       <Link
         to="/"
         className="relative text-lg w-[7rem] text-gray-400 hover:text-lg hover:text-zinc-500"
