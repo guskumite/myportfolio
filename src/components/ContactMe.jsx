@@ -93,7 +93,7 @@ const ContactMe = () => {
   const ContacMeLabel = ["Contact Me", "Contacto"];
   const FormLeftTag1 = ["Name:", "Nombre:"];
   const FormLeftTag2 = ["Email:", "Correo:"];
-  const FormLeftTag3 = ["Message:", "Mensaje:"];
+  const FormLeftTag3 = ["Message:", "  Mensaje:"];
 
   function getNav() {
     if (window.innerWidth < 600) {
@@ -186,11 +186,11 @@ const ContactMe = () => {
           <img className="w-full hover:w-[80%]" src={map1} />
         </a>
         <ul
-          className={`absolute left-[8rem] ${HideAuxLabels} ${Color1} top-[14.5rem] text-md`}
+          className={`absolute text-right left-[8rem] ${HideAuxLabels} ${Color1} top-[14.5rem] text-md`}
         >
-          <li className="ml-[2.3rem] mb-[0.5rem]">{FormLeftTag1[Labels]}</li>
-          <li className="ml-[2.4rem]">{FormLeftTag2[Labels]}</li>
-          <li className="ml-[1.1rem]">{FormLeftTag3[Labels]}</li>
+          <li className="ml-12">{FormLeftTag1[Labels]}</li>
+          <li className="ml-12">{FormLeftTag2[Labels]}</li>
+          <li className="ml-12">{FormLeftTag3[Labels]}</li>
         </ul>
         <form
           onSubmit={handleSubmit}
