@@ -57,6 +57,14 @@ const Skills = () => {
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
+  const Opacity = ["opacity-30", "opacity-80"];
+  let Color1 = "";
+  if (Dark === 0) {
+    Color1 = "text-stone-950";
+  }
+  if (Dark === 1) {
+    Color1 = "text-gray-400";
+  }
 
   const handleResize = () => {
     if (window.innerWidth < 600) {
@@ -105,6 +113,7 @@ const Skills = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          dark={Dark}
         />
       );
     }
@@ -187,18 +196,18 @@ const Skills = () => {
 
   return (
     <main className="absolute top-[0rem] bg-cover h-screen w-screen text-gray-400">
-      <img className="w-full min-w-[320px] opacity-80" src={bgImg} />
+      <img className={`w-full min-w-[320px] ${Opacity[Dark]}`} src={bgImg} />
       <section> {getNav()} </section>
       <div className="flex flex-rows">
         <button
-          className="border-2 ml-8 absolute text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleLang}
         >
           Language | Idioma <img className="w-[2rem] h-[2rem]" src={usFlag} />{" "}
           <img className="w-[2rem] h-[2rem]" src={esFlag} />
         </button>
         <button
-          className="border-2 ml-8 absolute text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleDark}
         >
           Darkmode | Modo oscuro 🌞🌛

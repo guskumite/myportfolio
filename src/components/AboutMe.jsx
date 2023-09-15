@@ -65,6 +65,21 @@ const AboutMe = () => {
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
+  const Opacity = ["opacity-30", "opacity-80"];
+  let Color1 = "";
+  if (Dark === 0) {
+    Color1 = "text-stone-950";
+  }
+  if (Dark === 1) {
+    Color1 = "text-gray-400";
+  }
+  let Color2 = "";
+  if (Dark === 0) {
+    Color2 = "text-stone-950";
+  }
+  if (Dark === 1) {
+    Color2 = "text-zinc-300";
+  }
 
   const handleResize = () => {
     if (window.innerWidth < 600) {
@@ -111,6 +126,7 @@ const AboutMe = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          dark={Dark}
         />
       );
     }
@@ -136,25 +152,25 @@ const AboutMe = () => {
 
   return (
     <main className="absolute top-[0rem] bg-cover h-screen w-screen text-gray-400">
-      <img className="w-full min-w-[320px] opacity-80" src={bgImg} />
+      <img className={`w-full min-w-[320px] ${Opacity[Dark]}`} src={bgImg} />
       <section> {getNav()} </section>
       <div className="flex flex-rows">
         <button
-          className="border-2 ml-8 absolute text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleLang}
         >
           Language | Idioma <img className="w-[2rem] h-[2rem]" src={usFlag} />{" "}
           <img className="w-[2rem] h-[2rem]" src={esFlag} />
         </button>
         <button
-          className="border-2 ml-8 absolute text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleDark}
         >
           Darkmode | Modo oscuro 🌞🌛
         </button>
       </div>
       <h2
-        className={`absolute ml-72 text-md mt-32 mb-4 font-bold text-3xl text-zinc-300 text-bold hover:text-4xl
+        className={`absolute ml-72 text-md mt-32 mb-4 font-bold text-3xl ${Color2} text-bold hover:text-4xl
         top-[3rem] ${Left}`}
         onClick={handleLang}
       >
@@ -165,7 +181,7 @@ const AboutMe = () => {
       >
         <img className="opacity-80 imgTrip" src={imgTrip} />
         <p
-          className="text-justify text-lg hover:text-2xl text-zinc-300 translate-x-[-3/4]"
+          className={`text-justify text-lg hover:text-2xl ${Color2} translate-x-[-3/4]`}
           onClick={handleLang}
         >
           {label2[Labels]}

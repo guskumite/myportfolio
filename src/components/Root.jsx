@@ -29,7 +29,30 @@ const Root = () => {
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
+  const Opacity = ["opacity-30", "opacity-80"];
+  let Color1 = "";
+  if (Dark === 0) {
+    Color1 = "text-stone-950";
+  }
+  if (Dark === 1) {
+    Color1 = "text-gray-400";
+  }
 
+  let Color2 = "";
+  if (Dark === 0) {
+    Color2 = "text-cyan-950";
+  }
+  if (Dark === 1) {
+    Color2 = "text-cyan-400";
+  }
+
+  let Color3 = "";
+  if (Dark === 0) {
+    Color3 = "bg-cyan-300";
+  }
+  if (Dark === 1) {
+    Color3 = "bg-zinc-300";
+  }
   function toggleOpen() {
     setIsOpen(!isOpen);
     localStorage.setItem("navbarOpen", isOpen);
@@ -84,6 +107,7 @@ const Root = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          dark={Dark}
         />
       );
     }
@@ -139,18 +163,18 @@ const Root = () => {
 
   return (
     <main className="bg-cover bg-no-repeat h-full w-full lg:max-width-[1200px] md:max-width-[619px] text-gray-400">
-      <img className="w-full min-w-[320px] opacity-80" src={bgImg} />
+      <img className={`w-full min-w-[320px] ${Opacity[Dark]}`} src={bgImg} />
       <section>{getNav()}</section>
       <div className="flex flex-rows">
         <button
-          className="border-2 ml-8 absolute text-md top-[3.9rem] left-[9rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[3.9rem] left-[9rem] gap-2 flex flex-rows`}
           onClick={handleLang}
         >
           Language | Idioma <img className="w-[2rem] h-[2rem]" src={usFlag} />{" "}
           <img className="w-[2rem] h-[2rem]" src={esFlag} />
         </button>
         <button
-          className="border-2 ml-8 absolute text-md top-[7.4rem] left-[9rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[7.4rem] left-[9rem] gap-2 flex flex-rows`}
           onClick={handleDark}
         >
           Darkmode | Modo oscuro 🌞🌛
@@ -160,22 +184,22 @@ const Root = () => {
         className={`w-[60%] absolute flex flex-row flex-wrap w-[24rem] mr-[2rem] top-[10rem] ${Left3}`}
       >
         {" "}
-        <h2 className="relative lg:text-2xl font-bold text-cyan-400 md:text-md">
+        <h2 className={`relative lg:text-2xl font-bold ${Color2} md:text-md`}>
           {Hello[Labels]}
         </h2>
-        <h2 className="px-4 relative lg:text-2xl text-zinc-300 md:text-md">
+        <h2 className={`px-4 relative lg:text-2xl ${Color1} md:text-md`}>
           {Iam[Labels]}
         </h2>
-        <h1 className="relative lg:text-xl text-zinc-400 md:text-md">
+        <h1 className={`relative lg:text-xl ${Color1} md:text-md`}>
           {MyName[Labels]}
         </h1>
-        <h2 className="relative lg:text-xl text-zinc-400 md:text-md">
+        <h2 className={`relative lg:text-xl ${Color1} md:text-md`}>
           {txt1[Labels]}{" "}
         </h2>
         <span className="hidden w-[25%]">x</span>
         <p
-          className={`absolute top-[6rem] text-center mt-[1rem] ml-[1rem] mb-[1rem] opacity-55 w-[14rem]
-       h-[2rem] bg-zinc-300 hover:bg-amber-200 rounded-[30px] ${Left1}`}
+          className={`absolute ${Color1} top-[6rem] text-center mt-[1rem] ml-[1rem] mb-[1rem] ${Opacity[Dark]} w-[14rem]
+       h-[2rem] ${Color3} hover:bg-amber-200 rounded-[30px] ${Left1}`}
         >
           {myProjects[Labels]}
         </p>

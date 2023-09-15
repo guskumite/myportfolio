@@ -67,6 +67,14 @@ const ContactMe = () => {
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
+  const Opacity = ["opacity-30", "opacity-80"];
+  let Color1 = "";
+  if (Dark === 0) {
+    Color1 = "text-stone-950";
+  }
+  if (Dark === 1) {
+    Color1 = "text-gray-400";
+  }
   const PlaceHolder1 = [
     "Enter your name please ...",
     "Tu nombre por favor ...",
@@ -106,6 +114,7 @@ const ContactMe = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          dark={Dark}
         />
       );
     }
@@ -147,21 +156,21 @@ const ContactMe = () => {
       <section className="">{getNav()}</section>
       <div className="flex flex-rows">
         <button
-          className="border-2 ml-8 absolute text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[3.7rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleLang}
         >
           Language | Idioma <img className="w-[2rem] h-[2rem]" src={usFlag} />{" "}
           <img className="w-[2rem] h-[2rem]" src={esFlag} />
         </button>
         <button
-          className="border-2 ml-8 absolute text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows"
+          className={`border-2 ml-8 absolute ${Color1} text-md top-[7.2rem] left-[8rem] gap-2 flex flex-rows`}
           onClick={handleDark}
         >
           Darkmode | Modo oscuro 🌞🌛
         </button>
       </div>
       <img
-        className="absolute top-[0rem] z-[-1] opacity-70 min-w-[320px] w-full"
+        className={`absolute top-[0rem] z-[-1] ${Opacity[Dark]} min-w-[320px] w-full`}
         src={bgImg}
       />
       <section className="mt-32 left-[3rem] h-screen bg-cover bg-no-repeat relative w-full ml-[1.9rem]">
@@ -174,7 +183,7 @@ const ContactMe = () => {
           <img className="w-full hover:w-[80%]" src={map1} />
         </a>
         <ul
-          className={`absolute left-[8rem] ${HideAuxLabels} top-[14.5rem] text-md`}
+          className={`absolute left-[8rem] ${HideAuxLabels} ${Color1} top-[14.5rem] text-md`}
         >
           <li className="ml-[2.3rem] mb-[0.5rem]">Name:</li>
           <li className="ml-[2.4rem]">Email:</li>
@@ -185,7 +194,7 @@ const ContactMe = () => {
           className={`h-[25%] mt-4 absolute top-[9rem] pt-8
            border-zinc-500 w-full md:w-3/4 ${LeftForm}`}
         >
-          <h2 className="ml-[39%] font-bold text-lg mb-2">
+          <h2 className={`ml-[39%] font-bold text-lg mb-2 ${Color1}`}>
             {ContacMeLabel[Labels]}
           </h2>
           <div className="w-[48%] ml-32 border-2 border-zinc-500 border-solid grid grid-rows-[4]">
@@ -227,13 +236,13 @@ const ContactMe = () => {
             <div className="grid grid-rows h-[0.5rem]">
               <p
                 className={`absolute top-[-6.5rem] animate-text-slide
-               text-zinc-300 text-lg hover:bg-blue-300 ${LeftFollowMe}`}
+               ${Color1} text-lg hover:bg-blue-300 ${LeftFollowMe}`}
               >
                 {" "}
                 {FollowMeLabel[Labels]}{" "}
               </p>
               <a
-                className={`w-[5rem] absolute top-[-6.5rem] text-zinc-300 ${InstagramFollowMe}`}
+                className={`w-[5rem] absolute top-[-6.5rem] ${Color1} ${InstagramFollowMe}`}
                 href="https://www.instagram.com/gmolanodev/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -246,7 +255,7 @@ const ContactMe = () => {
                 />
               </a>
               <a
-                className={`w-[5rem] absolute top-[-6.5rem] left-[19.2rem] text-zinc-300 ${LinkedInFollowMe}`}
+                className={`w-[5rem] absolute top-[-6.5rem] left-[19.2rem] ${Color1} ${LinkedInFollowMe}`}
                 href="https://www.linkedin.com/in/gustavo-alberto-molano-ruiz-735a564/"
                 target="_blank"
                 rel="noopener noreferrer"
