@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import theCV from "../assets/hv_gamr_v117.pdf";
 
-const NavBar = ({ home, about, skills, contact, academlo, dark }) => {
+const NavBar = ({ home, about, skills, contact, academlo, dark, mycv }) => {
   let Color1 = "";
   if (dark === 0) {
     Color1 = "text-stone-950";
@@ -38,11 +39,19 @@ const NavBar = ({ home, about, skills, contact, academlo, dark }) => {
       <div
         className={`relative text-lg w-[7rem] ${Color1} hover:text-lg hover:text-cyan-500`}
       >
+        <a href={theCV} download="hv_gamr_v117.pdf">
+          {mycv}
+        </a>
+      </div>
+      <div
+        className={`relative text-lg w-[7rem] ${Color1} hover:text-lg hover:text-cyan-500`}
+      >
         <a
           href="https://www.academlo.com"
           target="_blank"
           rel="noopener noreferrer"
         >
+          {" "}
           {academlo}
         </a>
       </div>

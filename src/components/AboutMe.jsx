@@ -64,6 +64,7 @@ const AboutMe = () => {
   const About = ["About", "Acerca de mi"];
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
+  const MyCV = ["My CV", "Mi Hoja de vida"];
   const Academlo = ["Academlo", "Academlo"];
   const Opacity = ["opacity-30", "opacity-80"];
   let Color1 = "";
@@ -116,6 +117,7 @@ const AboutMe = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          mycv={MyCV[Labels]}
         />
       );
     } else {
@@ -127,6 +129,7 @@ const AboutMe = () => {
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
           dark={Dark}
+          mycv={MyCV[Labels]}
         />
       );
     }

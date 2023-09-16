@@ -67,6 +67,7 @@ const ContactMe = () => {
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
   const Academlo = ["Academlo", "Academlo"];
+  const MyCV = ["My CV", "Mi hoja de vida"];
   const Opacity = ["opacity-30", "opacity-80"];
   let Color1 = "";
   if (Dark === 0) {
@@ -107,6 +108,7 @@ const ContactMe = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          mycv={MyCV[Labels]}
         />
       );
     } else {
@@ -118,6 +120,7 @@ const ContactMe = () => {
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
           dark={Dark}
+          mycv={MyCV[Labels]}
         />
       );
     }

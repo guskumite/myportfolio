@@ -1,3 +1,4 @@
+import theCV from "../assets/hv_gamr_v117.pdf";
 function NavBarMobile({
   open,
   onToggle,
@@ -6,6 +7,7 @@ function NavBarMobile({
   skills,
   contact,
   academlo,
+  mycv,
 }) {
   console.log(open);
   return (
@@ -30,7 +32,7 @@ function NavBarMobile({
       <div
         className={`${
           open ? "block" : "hidden"
-        } md:block md:static absolute md:h-auto h-[12rem] top-[4rem] left-0 md:w-[70%] w-[80%] bg-cyan-400 px-4 py-4`}
+        } md:block md:static absolute md:h-auto h-[14rem] top-[4rem] left-0 md:w-[70%] w-[80%] bg-cyan-400 px-4 py-4`}
         style={{ zIndex: 9999 }}
       >
         <a className="text-sm hover:text-cyan-700 hover:text-lg" href="/">
@@ -51,6 +53,14 @@ function NavBarMobile({
         >
           {" "}
           {contact}
+        </a>
+        <a
+          className="text-sm hover:text-cyan-700 hover:text-lg"
+          href={theCV}
+          download="hv_gamr_v117.pdf"
+        >
+          {" "}
+          {mycv}
         </a>
         <a
           className="text-sm hover:text-cyan-700 hover:text-lg"

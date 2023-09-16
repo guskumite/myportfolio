@@ -28,6 +28,7 @@ const Root = () => {
   const About = ["About", "Acerca de mi"];
   const Skills = ["Skills", "Habilidades"];
   const Contact = ["Contact Me", "Contacto"];
+  const MyCV = ["My CV", "Mi Hoja de vida"];
   const Academlo = ["Academlo", "Academlo"];
   const Opacity = ["opacity-30", "opacity-80"];
   let Color1 = "";
@@ -97,6 +98,7 @@ const Root = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          mycv={MyCV[Labels]}
         />
       );
     } else {
@@ -107,6 +109,7 @@ const Root = () => {
           skills={Skills[Labels]}
           contact={Contact[Labels]}
           academlo={Academlo[Labels]}
+          mycv={MyCV[Labels]}
           dark={Dark}
         />
       );
@@ -205,10 +208,9 @@ const Root = () => {
         </p>
       </section>
       <div
-        className={`w-[60%] absolute top-[20rem] left-[12rem]
+        className={`w-[70%] absolute top-[20rem] left-[12rem]
        flex flex-wrap justify-between bg-emerald-100 ${Left2}`}
       >
-        <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4"></div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 hover:bg-amber-200">
           <a
             className="text-center mt-[1rem] ml-[1.5rem] mb-[1rem] opacity-55 w-[9rem] h-[9rem] bg-zinc-100 hover:bg-amber-200 rounded-[30px]"
