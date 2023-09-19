@@ -1,4 +1,4 @@
-import theCV from "../assets/hv_gamr_v117.pdf";
+import theCV from "../assets/hv_gamr_v118.pdf";
 function NavBarMobile({
   open,
   onToggle,
@@ -57,7 +57,7 @@ function NavBarMobile({
         <a
           className="text-sm hover:text-cyan-700 hover:text-lg"
           href={theCV}
-          download="hv_gamr_v117.pdf"
+          download="hv_gamr_v118.pdf"
         >
           {" "}
           {mycv}

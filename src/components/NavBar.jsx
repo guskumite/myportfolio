@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import theCV from "../assets/hv_gamr_v117.pdf";
+import theCV from "../assets/hv_gamr_v118.pdf";
 
 const NavBar = ({ home, about, skills, contact, academlo, dark, mycv }) => {
   let Color1 = "";
@@ -39,7 +39,7 @@ const NavBar = ({ home, about, skills, contact, academlo, dark, mycv }) => {
       <div
         className={`relative text-lg w-[7rem] ${Color1} hover:text-lg hover:text-cyan-500`}
       >
-        <a href={theCV} download="hv_gamr_v117.pdf">
+        <a href={theCV} download="hv_gamr_v118.pdf">
           {mycv}
         </a>
       </div>
